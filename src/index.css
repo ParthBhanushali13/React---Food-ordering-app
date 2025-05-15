@@ -1,68 +1,191 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
+  font-family: sans-serif;
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0px auto;
+}
+
+header {
+  width: 100%;
+  background-color: #94573C;
+  /* font-family: 'TEREXMAL SUNDAY Personal Use', sans-serif; */
+  /* height: 150px; */
+}
+
+.header {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.logo-container {
+  width: 80px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.logo-container img {
+  width: 100%;
+}
+
+.nav-items ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 0px;
+}
+
+.nav-items ul li {
+  list-style-type: none;
+  font-size: 24px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  color: #6F240C;
+  font-weight: 700;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.nav-items ul li:hover {
+  color: white;
+}
+
+.login-btn {
+  color: #6F240C;
+  font-size: 24px;
+  color: #6F240C;
+  background-color: #94573C;
+  border: 2px solid #6F240C;
+
+}
+
+.login-btn:hover {
+  color: white;
+  background-color: #6F240C;
+}
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.res-card {
+  width: 200px;
+  height: 400px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  transition: 0.4s ease-in-out;
+
+}
+
+.res-card:hover {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+
+}
+
+.res-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.search-container{
+  display: flex;
+  gap: 10px;
+}
+.search-container input{
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.filter-btn-container {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  margin: 20px 5px;
+}
+button{
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+.filter-btn {
+  background-color: #94573C;
+  color: #FCC104;
+  box-shadow: 4px 4px 4px 4px rgba(148, 87, 60, 0.5);
+}
+
+.filter-btn:hover {
+  background-color: #6F240C;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+
+.loader {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 8px solid #94573C;
+  border-top: 8px solid #FCC104;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
   }
-  a:hover {
-    color: #747bff;
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+.shimmer-container {
+  margin-top: 34px;
+}
+
+.shimmer-card {
+  width: 200px;
+  height: 400px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #f0f0f0;
+}
+
+.shimmer-img {
+  background-color: #c6c6c6;
+}
+
+.shimmer-title {
+  width: 200px;
+  height: 21px;
+  margin: 18px 0px;
+  background-color: #c6c6c6;
+}
+
+.shimmer-rating {
+  width: 200px;
+  height: 21px;
+  margin: 21px 0px;
+  background-color: #c6c6c6;
 }
